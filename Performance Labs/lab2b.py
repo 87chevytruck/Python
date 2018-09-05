@@ -1,4 +1,4 @@
-"""Python2 lab2b"""
+"""Ricky Smith, Python2 lab2b, 4 Sep 2018"""
 print "==================================="
 
 # TODO: Set x equal to 545
