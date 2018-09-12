@@ -211,8 +211,8 @@ while input == "yes":
     # Variable Math Calculation
     elif userInput == 8:
         expression = raw_input("Manually type your equation using only "
-                               "numbers and the following operators:  "
-                               "{ (), +, -, *, /, ** }:  ")
+                               "numbers and the following operators:  \n"
+                               " (),  +,  -,  *,  /,  **  :  \n")
         x = equals(expression)
         print(expression)
         print(x)
