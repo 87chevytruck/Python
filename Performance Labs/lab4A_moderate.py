@@ -1,4 +1,4 @@
-""" Ricky Smith, Lab4A:  Calculator   - Simple - , 10 Sep 2018 """
+""" Ricky Smith, Lab4A:  Calculator   - Moderate - , 10 Sep 2018 """
 import time
 
 # def multi function
@@ -91,7 +91,7 @@ def equals(n):
 # hard sets input for while loop
 input = "yes"
 while input == "yes":
-    print("\nSelect a calculation option from the following options:")
+    print("\nSelect a calculation option from the following menu:")
     userInput = inputInt("1)  add two numbers\n2)  subtract two numbers\n"
                           "3)  multiply two numbers\n4)  divide two numbers\n"
                           "5)  power of two numbers\n6)  Factorial a number\n"
@@ -210,7 +210,9 @@ while input == "yes":
     
     # Variable Math Calculation
     elif userInput == 8:
-        expression = raw_input("Manually type your equation using only numbers:")
+        expression = raw_input("Manually type your equation using only "
+                               "numbers and the following operators:  "
+                               "{ (), +, -, *, /, ** }:  ")
         x = equals(expression)
         print(expression)
         print(x)
@@ -240,6 +242,7 @@ while input == "yes":
     else:
         input = "no"
 
+# print out for poops and giggles
 print("Thanks for visiting, we hope you come back soon!\n")
 print("\tThis program will end in:\n")
 time.sleep(.5)
