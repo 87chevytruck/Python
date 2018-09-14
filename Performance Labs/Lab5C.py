@@ -83,9 +83,27 @@ hero2.setSuperPower("God Like Powers (Immortal, Telekinetic, Telepathic, "
                     "Invisibility, Super Strength, etc.)")
 hero2.setBirthPlace("UNKNOWN")
 
-# display hero 1 and 2's info
+x1 = raw_input("What is your Hero Name?  ")
+x2 = raw_input("What is your Hero's Costume Colors?  ")
+x3 = raw_input("What is your Hero's Home World?  ")
+x4 = raw_input("What is your Hero's Age?  ")
+x5 = raw_input("What is your Hero's Real First Name?  ")
+x6 = raw_input("What is your Hero's Real Last Name?  ")
+x7 = raw_input("What are your Hero's Super Powers?  ")
+x8 = raw_input("What is your Hero's Place of Birth?  ")
+
+heroX = Hero(x1, x2, x3)
+heroX.setAge(x4)
+heroX.setFname(x5)
+heroX.setLname(x6)
+heroX.setSuperPower(x7)
+heroX.setBirthPlace(x8)
+
+# display hero 1 ,2 and X's info
 print("= = = = = = = Hero 1 = = = = = = =")
 hero1.printDetails()
 print("\n= = = = = = = Hero 2 = = = = = = =")
 hero2.printDetails()
+print("\n= = = = = = = Hero X = = = = = = =")
+heroX.printDetails()
 
