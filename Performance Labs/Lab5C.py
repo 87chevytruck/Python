@@ -7,7 +7,7 @@ class Person(object):
         self.__lName = lName
         self.__age = age
         self.__birthPlace = birthPlace
-    
+    # create functions to set and get Person attributes
     def setFname(self, fName):
         self.__fName = fName
 
@@ -36,22 +36,23 @@ class Person(object):
 # create Hero Class
 class Hero(Person):
     def __init__(self, heroName, heroColor, birthPlanet):
-        # Person.__init__(self, heroName)
         self.heroName = heroName
-        # self.realName = person.fName + " " + person.lName
-        # self.superPower = superPower
         self.heroColor = heroColor
         self.birthPlanet = birthPlanet
 
+    # prints all stats of the Hero, including those from 
+    ## Parent Class Person
     def printDetails(self):
         print("Hero's Name:  {}").format(self.heroName)
-        print("Hero's Real Name:  {} {}").format(self.getFname(), self.getLname())
+        print("Hero's Real Name:  {} {}").format(self.getFname(), 
+                                                 self.getLname())
         print("Hero's Age:  {}").format(self.getAge())
         print("Hero's Super Power:  {}").format(self.getSuperPower())
         print("Hero's Costume Color:  {}").format(self.heroColor)
         print("Hero's Birth Place:  {}").format(self.getBirthPlace())
         print("Hero's Home World:  {}").format(self.getBirthPlanet())
 
+    # get and set Hero attributes
     def getSuperPower(self):
         return self.superPower
 
@@ -64,18 +65,20 @@ class Hero(Person):
     def setBirthPlanet(self, birthPlanet):
         self.birthPlanet = birthPlanet
 
-# set hero 1 and 2's information using the class Invisible_Hero
+# set hero 1 and 2's information using the class Hero
 hero1 = Hero("The Invisible Hulk", "N/A (he's sort of invisible)", 
                        "Blackhole X-43")
 hero2 = Hero("The Incredible Lady", "N/A (she's sort of invisible)", 
              "Lunar S-7")
 
+# set hero 1's information using the class Hero/Person functions
 hero1.setAge(143)
 hero1.setFname("Jack")
 hero1.setLname("Smith")
 hero1.setSuperPower("Super Strength and Inisibility")
 hero1.setBirthPlace("Secret Location")
 
+# set hero 1's information using the class Hero/Person functions
 hero2.setAge(718)
 hero2.setFname("Aria")
 hero2.setLname("Luna")
@@ -83,6 +86,7 @@ hero2.setSuperPower("God Like Powers (Immortal, Telekinetic, Telepathic, "
                     "Invisibility, Super Strength, etc.)")
 hero2.setBirthPlace("UNKNOWN")
 
+# user input for Hero X
 x1 = raw_input("What is your Hero Name?  ")
 x2 = raw_input("What is your Hero's Costume Colors?  ")
 x3 = raw_input("What is your Hero's Home World?  ")
@@ -92,6 +96,7 @@ x6 = raw_input("What is your Hero's Real Last Name?  ")
 x7 = raw_input("What are your Hero's Super Powers?  ")
 x8 = raw_input("What is your Hero's Place of Birth?  ")
 
+# set Hero X's stats via previous user input
 heroX = Hero(x1, x2, x3)
 heroX.setAge(x4)
 heroX.setFname(x5)
