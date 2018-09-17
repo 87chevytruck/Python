@@ -20,6 +20,7 @@ class Vehicle_Type:
             else:
                 return "ERROR:  Incorrect Vehicle Type Entered"
 
+# Created Engine Class 
 class Engine:
     def __init__(self, numCylinders, HP, TQ):
         self.numCylinders = numCylinders
@@ -59,6 +60,7 @@ class Engine:
     def getTQ(self):
         return self.TQ
 
+# Created Vehicle Abilities Class (towing, doors, weight)
 class Vehicle_Abilities:
     def __init__(self, vTowing, vWeight, vDoors):
         self.vTowing = vTowing
@@ -98,8 +100,9 @@ class Vehicle_Abilities:
     def getDoors(self):
         return self.vDoors
 
+# Created Vehicle Options Class
 class Vehicle_Options:
-    def __init__(self, powerWindows, powerLocks, nav, premAudio, backCam, leatherSeats, heatedSeats, ventedSeats, blindSpot, autoTrans, driveTrain):
+    def __init__(self, color, powerWindows, powerLocks, nav, premAudio, backCam, leatherSeats, heatedSeats, ventedSeats, blindSpot, autoTrans, driveTrain):
         self.powerWindows = powerWindows
         self.powerLocks = powerLocks
         self.nav = nav
@@ -111,7 +114,9 @@ class Vehicle_Options:
         self.blindSpot = blindSpot
         self.autoTrans = autoTrans
         self.driveTrain = driveTrain
+        self.color = color
 
+    # define set and get for Power Windows
     def setPowerWindows(self, powerWindows):
         if powerWindows == "Yes" or powerWindows == "yes" or powerWindows == "Y" or powerWindows == "y":
             return "Yes"
@@ -119,6 +124,206 @@ class Vehicle_Options:
             return "No"
         else:
             return "ERROR:  You must enter Yes or No"
+
+    def getPowerWindows(self, powerWindows):
+        return self.powerWindows
+
+    # define set and get for Power Locks
+    def setPowerLocks(self, powerLocks):
+        if powerLocks == "Yes" or powerLocks == "yes" or powerLocks == "Y" or powerLocks == "y":
+            return "Yes"
+        elif powerLocks == "No" or powerLocks == "no" or powerLocks == "N" or powerLocks == "n":
+            return "No"
+        else:
+            return "ERROR:  You must enter Yes or No"
+
+    def getPowerLocks(self, powerLocks):
+        return self.powerLocks
+
+
+    # define set and get for Navigation
+    def setNav(self, nav):
+        if nav == "Yes" or nav == "yes" or nav == "Y" or nav == "y":
+            return "Yes"
+        elif nav == "No" or nav == "no" or nav == "N" or nav == "n":
+            return "No"
+        else:
+            return "ERROR:  You must enter Yes or No"
+
+    def getNav(self, nav):
+        return self.nav
+
+    # define set and get Premium Audio
+    def setPremAudio(self, premAudio):
+        if premAudio == "Yes" or premAudio == "yes" or premAudio == "Y" or premAudio == "y":
+            return "Yes"
+        elif premAudio == "No" or premAudio == "no" or premAudio == "N" or premAudio == "n":
+            return "No"
+        else:
+            return "ERROR:  You must enter Yes or No"
+
+    def getPremAudio(self, premAudio):
+        return self.premAudio
+
+
+    # define set and get Backup Camera
+    def setBackCam(self, backCam):
+        if backCam == "Yes" or backCam == "yes" or backCam == "Y" or backCam == "y":
+            return "Yes"
+        elif backCam == "No" or backCam == "no" or backCam == "N" or backCam == "n":
+            return "No"
+        else:
+            return "ERROR:  You must enter Yes or No"
+
+    def getBackCam(self, backCam):
+        return self.backCam
+
+
+
+    # define set and get Leatehr Seats
+    def setLeatherSeats(self, leatherSeats):
+        if leatherSeats == "Yes" or leatherSeats == "yes" or leatherSeats == "Y" or leatherSeats == "y":
+            return "Yes"
+        elif leatherSeats == "No" or leatherSeats == "no" or leatherSeats == "N" or leatherSeats == "n":
+            return "No"
+        else:
+            return "ERROR:  You must enter Yes or No"
+
+    def getLeatherSeats(self, leatherSeats):
+        return self.leatherSeats
+        
+
+    # define set and get Heated Seats
+    def setHeatedSeats(self, heatedSeats):
+        if heatedSeats == "Yes" or heatedSeats == "yes" or heatedSeats == "Y" or heatedSeats == "y":
+            return "Yes"
+        elif heatedSeats == "No" or heatedSeats == "no" or heatedSeats == "N" or heatedSeats == "n":
+            return "No"
+        else:
+            return "ERROR:  You must enter Yes or No"
+
+    def getHeatedSeats(self, heatedSeats):
+        return self.heatedSeats
+
+    # define set and get Vented Seats
+    def setVentedSeats(self, ventedSeats):
+        if ventedSeats == "Yes" or ventedSeats == "yes" or ventedSeats == "Y" or ventedSeats == "y":
+            return "Yes"
+        elif ventedSeats == "No" or ventedSeats == "no" or ventedSeats == "N" or ventedSeats == "n":
+            return "No"
+        else:
+            return "ERROR:  You must enter Yes or No"
+
+    def getVentedSeats(self, ventedSeats):
+        return self.ventedSeats
+
+    # define set and get Blind Spot Detection
+    def setBlindSpot(self, blindSpot):
+        if blindSpot == "Yes" or blindSpot == "yes" or blindSpot == "Y" or blindSpot == "y":
+            return "Yes"
+        elif blindSpot == "No" or blindSpot == "no" or blindSpot == "N" or blindSpot == "n":
+            return "No"
+        else:
+            return "ERROR:  You must enter Yes or No"
+
+    def getBlindSpot(self, blindSpot):
+        return self.blindSpot
+
+    # define set and get Automatic Trans
+    def setAutoTrans(self, autoTrans):
+        if autoTrans == "Yes" or autoTrans == "yes" or autoTrans == "Y" or autoTrans == "y":
+            return "Yes"
+        elif autoTrans == "No" or autoTrans == "no" or autoTrans == "N" or autoTrans == "n":
+            return "No"
+        else:
+            return "ERROR:  You must enter Yes or No"
+
+    def getAutoTrans(self, autoTrans):
+        return self.autoTrans
+
+
+    # define set and get Drive Train
+    def setDriveTrain(self, driveTrain):
+        if driveTrain == "AWD" or driveTrain == "awd" or driveTrain == "Awd":
+            return "AWD"
+        elif driveTrain == "4x4" or driveTrain == "4 x 4" or driveTrain == "4wd" or driveTrain == "4WD":
+            return "4WD"
+        elif driveTrain == "RWD" or driveTrain == "rwd" or driveTrain == "Rwd":
+            return "RWD"
+        elif driveTrain == "FWD" or driveTrain == "fwd" or driveTrain == "Fwd":
+            return "FWD"
+        else:
+            return "ERROR:  You must enter RWD, FWD, 4WD, or AWD"
+
+    def getDriveTrain(self, driveTrain):
+        return self.driveTrain
+
+    # define set and get vehicle color
+    def setColor(self, color):
+        self.color = color
+
+    def getColor(self, color):
+        return self.color
+
+
+class Vehicle(Vehicle_Type, Engine, Vehicle_Abilities, Vehicle_Options):
+    def __init__(self, vMake, vModel, vYear, vType, numCylinders, HP, TQ, vTowing, vWeight, vDoors, color, powerWindows, powerLocks, nav, premAudio, backCam, leatherSeats, heatedSeats, ventedSeats, blindSpot, autoTrans, driveTrain):
+        # self.Vehicle_Type = vType(vType)
+        # self.Engine = Engine(numCylinders, HP, TQ)
+        # self.Vehicle_Abilities = Vehicle_Abilities(vTowing, vWeight, vDoors)
+        # self.Vehicle_Options = Vehicle_Options(color, powerWindows, powerLocks, nav, premAudio, backCam, leatherSeats, heatedSeats, ventedSeats, blindSpot, autoTrans, driveTrain)
+        self.vMake = vMake
+        self.vModel = vModel
+        self.vYear = vYear
+
+    def setVmake(self, vMake):
+        self.vMake = vMake
     
-    def test(self):
-        print("{}").format(self.vWeight)
+    def getVmake(self):
+        return self.vMake
+
+    def setVmodel(self, vModel):
+        self.vModel = vModel
+    
+    def getVmodel(self):
+        return self.vModel
+
+    def setVyear(self, vYear):
+        self.vYear = vYear
+    
+    def getVyear(self):
+        return self.vYear
+
+
+    def printVehicle(self, vMake, vModel, vYear, vType, numCylinders, HP, TQ, vTowing, vWeight, vDoors, color, powerWindows, powerLocks, nav, premAudio, backCam, leatherSeats, heatedSeats, ventedSeats, blindSpot, autoTrans, driveTrain):
+        print("Make of vehicle:  {}").format(self.getVmake)
+        print("Model of vehicle:  {}").format(self.getVmodel)
+        print("Year of vehicle:  {}").format(self.getVyear)
+        print("Type of vehicle:  {}").format(self.vType)
+        print("The vehicle has {} doors").format(self.vDoors)
+        print("Color of vehicle:  {}").format(self.color)
+        print("The Engine in the vehicle has:")
+        print("\t{} - cylinders").format(self.numCylinders)
+        print("\t{} - Horse Power").format(self.HP)
+        print("\t{} - Torque").format(self.TQ)
+        print("Does the vehicle have an Automatic Transmission:  {}").format(self.autoTrans)
+        print("The vehicle has the following Drive Train:  {}").format(self.driveTrain)
+        print("The vehicle has a curb weight of:  {} lbs").format(self.vWeight)
+        print("The vehicle's towing capacity is:  {}").format(self.vTowing)
+        print("The vehicle's options are as follows:")
+        print("\tPower Windows:  {}").format(self.powerWindows)
+        print("\tPower Locks:  {}").format(self.powerLocks)
+        print("\tNavigation System:  {}").format(self.nav)
+        print("\tPremium Audio System:  {}").format(self.premAudio)
+        print("\tBackup Camera:  {}").format(self.backCam)
+        print("\tLeather Seats:  {}").format(self.leatherSeats)
+        print("\tHeated Seats:  {}").format(self.heatedSeats)
+        print("\tCooled/Vented Seats:  {}").format(self.ventedSeats)
+        print("\tBlind Spot Detection:  {}").format(self.blindSpot)
+
+
+# user created vehicle
+
+
+
+
