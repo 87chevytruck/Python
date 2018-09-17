@@ -28,6 +28,7 @@ class Engine:
         self.TQ = TQ
     
     def setNumCylinders(self, numCylinders):
+        numCylinders = int(numCylinders)
         if numCylinders < 2:
             return "ERROR:  Too few cylinders chosen."
         elif numCylinders > 12:
@@ -39,6 +40,7 @@ class Engine:
         return self.numCylinders
     
     def setHP(self, HP):
+        HP = int(HP)
         if HP > 1500:
             return "ERROR:  Too much power."
         elif HP < 50:
@@ -50,6 +52,7 @@ class Engine:
         return self.HP
 
     def setTQ(self, TQ):
+        TQ = int(TQ)
         if TQ > 2500:
             return "ERROR:  Too much TQ."
         elif TQ < 50:
@@ -68,6 +71,7 @@ class Vehicle_Abilities:
         self.vDoors = vDoors
 
     def setTowing(self, vTowing):
+        vTowing = int(vTowing)
         if vTowing < 0:
             return "ERROR:  Tow rating must be at least 0 lbs"
         elif vTowing > 30000:
@@ -79,6 +83,7 @@ class Vehicle_Abilities:
         return self.vTowing
 
     def setWeight(self, vWeight):
+        vWeight = int(vWeight)
         if vWeight < 1800:
             return "ERROR:  Vehicle weight must be at least 1,800 lbs"
         elif vWeight > 30000:
@@ -90,6 +95,7 @@ class Vehicle_Abilities:
         return self.vWeight
 
     def setDoors(self, vDoors):
+        vDoors = int(vDoors)
         if vDoors < 2:
             return "ERROR:  Vehicle must have at least 2 doors"
         elif vDoors > 5:
@@ -267,7 +273,8 @@ class Vehicle_Options:
 
 
 class Vehicle(Vehicle_Type, Engine, Vehicle_Abilities, Vehicle_Options):
-    def __init__(self, vMake, vModel, vYear, vType, numCylinders, HP, TQ, vTowing, vWeight, vDoors, color, powerWindows, powerLocks, nav, premAudio, backCam, leatherSeats, heatedSeats, ventedSeats, blindSpot, autoTrans, driveTrain):
+ #   def __init__(self, vMake, vModel, vYear, vType, numCylinders, HP, TQ, vTowing, vWeight, vDoors, color, powerWindows, powerLocks, nav, premAudio, backCam, leatherSeats, heatedSeats, ventedSeats, blindSpot, autoTrans, driveTrain):
+    def __init__(self, vMake, vModel, vYear):
         # self.Vehicle_Type = vType(vType)
         # self.Engine = Engine(numCylinders, HP, TQ)
         # self.Vehicle_Abilities = Vehicle_Abilities(vTowing, vWeight, vDoors)
@@ -294,11 +301,11 @@ class Vehicle(Vehicle_Type, Engine, Vehicle_Abilities, Vehicle_Options):
     def getVyear(self):
         return self.vYear
 
-
-    def printVehicle(self, vMake, vModel, vYear, vType, numCylinders, HP, TQ, vTowing, vWeight, vDoors, color, powerWindows, powerLocks, nav, premAudio, backCam, leatherSeats, heatedSeats, ventedSeats, blindSpot, autoTrans, driveTrain):
-        print("Make of vehicle:  {}").format(self.getVmake)
-        print("Model of vehicle:  {}").format(self.getVmodel)
-        print("Year of vehicle:  {}").format(self.getVyear)
+    def printVehicle(self):
+#    def printVehicle(self, vMake, vModel, vYear, vType, numCylinders, HP, TQ, vTowing, vWeight, vDoors, color, powerWindows, powerLocks, nav, premAudio, backCam, leatherSeats, heatedSeats, ventedSeats, blindSpot, autoTrans, driveTrain):
+        print("Make of vehicle:  {}").format(self.vMake)
+        print("Model of vehicle:  {}").format(self.vModel)
+        print("Year of vehicle:  {}").format(self.vYear)
         print("Type of vehicle:  {}").format(self.vType)
         print("The vehicle has {} doors").format(self.vDoors)
         print("Color of vehicle:  {}").format(self.color)
@@ -323,7 +330,66 @@ class Vehicle(Vehicle_Type, Engine, Vehicle_Abilities, Vehicle_Options):
 
 
 # user created vehicle
+# vehicle_1 = Vehicle("Ford", "Mustang", 2018, "car", 8, 415, 430, 0, 3600, 2, "silver", "yes", "yes", "yes", "yes", "no", "no", "no", "no", "no", "y", "rwd")
+vehicle_1 = Vehicle("Ford", "Mustang", 2018)
 
 
+# vehicle_2 = Vehicle("Chevrolet", "Corvette", 2018, "car", 8, 650, 830, 0, 2800, 2, "blue", "yes", "yes", "n", "y", "yes", "no", "no", "no", "no", "no", "rwd")
+vehicle_2 = Vehicle("Chevrolet", "Corvette", 2018)
 
 
+x1 = raw_input("What is the Make of the vehicle?  ")
+x2 = raw_input("What is the Model of the vehicle?  ")
+x3 = raw_input("What is the Year of the vehicle?  ")
+x10 = raw_input("How many Doors does the vehicle have?  ")
+x11 = raw_input("What is the vehicle's primary color?  ")
+x5 = raw_input("How many Cylinders does the engine have?  ")
+x6 = raw_input("What is the engine's Horse Power?  ")
+x7 = raw_input("What is the engine's Torque?  ")
+x21 = raw_input("Does the vehicle have an Automatic Transmission?  ")
+x22 = raw_input("What is the vehicle's Drive Train? (AWD, RWD, FWD, 4WD)  ")
+x9 = raw_input("What is the vehicle's curb weight?  ")
+x4 = raw_input("what is the Type of vehicle? (truck, car, van)  ")
+x8 = raw_input("What is the vehicle's Towing Capacity?  ")
+x12 = raw_input("Does the vehicle have Power Windows?  ")
+x13 = raw_input("Does the vehicle have Power Locks?  ")
+x14 = raw_input("Does the vehicle have Navigation?  ")
+x15 = raw_input("Does the vehicle have Premium Audio?  ")
+x16 = raw_input("Does the vehicle have a Backup Camera?  ")
+x17 = raw_input("Does the vehicle have Leather Seats?  ")
+x18 = raw_input("Does the vehicle have Heated Seats?  ")
+x19 = raw_input("Does the vehicle have Cooled/Ventilated Seats?  ")
+x20 = raw_input("Does the vehicle have Blind Spot Detection?  ")
+
+# vehicle_X = Vehicle(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, x16, x17, x18, x19, x20, x21, x22)
+vehicle_X = Vehicle(x1, x2, x3)
+vehicle_X.vType = x4
+vehicle_X.numCylinders = x5
+vehicle_X.HP = x6
+vehicle_X.setTQ(x7)
+vehicle_X.setTowing(x8)
+vehicle_X.setWeight(x9)
+vehicle_X.vDoors = x10
+vehicle_X.setColor(x11)
+vehicle_X.setPowerWindows(x12)
+vehicle_X.setPowerLocks(x13)
+vehicle_X.setNav(x14)
+vehicle_X.setPremAudio(x15)
+vehicle_X.setBackCam(x16)
+vehicle_X.leatherSeats = x17
+vehicle_X.heatedSeats = x18
+vehicle_X.ventedSeats = x19
+vehicle_X.blindSpot = x20
+vehicle_X.autoTrans = x21
+vehicle_X.driveTrain = x22
+
+
+print("======= First Default Vechicle =======")
+# vehicle_1.printVehicle()
+
+print("\n\n======= Second Default Vechicle =======")
+
+# vehicle_2.printVehicle()
+
+print("\n\n======= User Created Vechicle =======")
+vehicle_X.printVehicle()
