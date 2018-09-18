@@ -125,9 +125,9 @@ class Vehicle_Options:
     # define set and get for Power Windows
     def setPowerWindows(self, powerWindows):
         if powerWindows == "Yes" or powerWindows == "yes" or powerWindows == "Y" or powerWindows == "y":
-            return "Yes"
+            self.powerWindows = "Yes"
         elif powerWindows == "No" or powerWindows == "no" or powerWindows == "N" or powerWindows == "n":
-            return "No"
+            self.powerWindows =  "No"
         else:
             return "ERROR:  You must enter Yes or No"
 
@@ -137,9 +137,9 @@ class Vehicle_Options:
     # define set and get for Power Locks
     def setPowerLocks(self, powerLocks):
         if powerLocks == "Yes" or powerLocks == "yes" or powerLocks == "Y" or powerLocks == "y":
-            return "Yes"
+            self.powerLocks = "Yes"
         elif powerLocks == "No" or powerLocks == "no" or powerLocks == "N" or powerLocks == "n":
-            return "No"
+            self.powerLocks = "No"
         else:
             return "ERROR:  You must enter Yes or No"
 
@@ -150,9 +150,9 @@ class Vehicle_Options:
     # define set and get for Navigation
     def setNav(self, nav):
         if nav == "Yes" or nav == "yes" or nav == "Y" or nav == "y":
-            return "Yes"
+            self.nav = "Yes"
         elif nav == "No" or nav == "no" or nav == "N" or nav == "n":
-            return "No"
+            self.nav = "No"
         else:
             return "ERROR:  You must enter Yes or No"
 
@@ -162,9 +162,9 @@ class Vehicle_Options:
     # define set and get Premium Audio
     def setPremAudio(self, premAudio):
         if premAudio == "Yes" or premAudio == "yes" or premAudio == "Y" or premAudio == "y":
-            return "Yes"
+            self.premAudio = "Yes"
         elif premAudio == "No" or premAudio == "no" or premAudio == "N" or premAudio == "n":
-            return "No"
+            self.premAudio = "No"
         else:
             return "ERROR:  You must enter Yes or No"
 
@@ -175,9 +175,9 @@ class Vehicle_Options:
     # define set and get Backup Camera
     def setBackCam(self, backCam):
         if backCam == "Yes" or backCam == "yes" or backCam == "Y" or backCam == "y":
-            return "Yes"
+            self.backCam = "Yes"
         elif backCam == "No" or backCam == "no" or backCam == "N" or backCam == "n":
-            return "No"
+            self.backCam = "No"
         else:
             return "ERROR:  You must enter Yes or No"
 
@@ -189,9 +189,9 @@ class Vehicle_Options:
     # define set and get Leatehr Seats
     def setLeatherSeats(self, leatherSeats):
         if leatherSeats == "Yes" or leatherSeats == "yes" or leatherSeats == "Y" or leatherSeats == "y":
-            return "Yes"
+            self.leatherSeats = "Yes"
         elif leatherSeats == "No" or leatherSeats == "no" or leatherSeats == "N" or leatherSeats == "n":
-            return "No"
+            self.leatherSeats = "No"
         else:
             return "ERROR:  You must enter Yes or No"
 
@@ -202,9 +202,9 @@ class Vehicle_Options:
     # define set and get Heated Seats
     def setHeatedSeats(self, heatedSeats):
         if heatedSeats == "Yes" or heatedSeats == "yes" or heatedSeats == "Y" or heatedSeats == "y":
-            return "Yes"
+            self.heatedSeats = "Yes"
         elif heatedSeats == "No" or heatedSeats == "no" or heatedSeats == "N" or heatedSeats == "n":
-            return "No"
+            self.heatedSeats = "No"
         else:
             return "ERROR:  You must enter Yes or No"
 
@@ -214,9 +214,9 @@ class Vehicle_Options:
     # define set and get Vented Seats
     def setVentedSeats(self, ventedSeats):
         if ventedSeats == "Yes" or ventedSeats == "yes" or ventedSeats == "Y" or ventedSeats == "y":
-            return "Yes"
+            self.ventedSeats = "Yes"
         elif ventedSeats == "No" or ventedSeats == "no" or ventedSeats == "N" or ventedSeats == "n":
-            return "No"
+            self.ventedSeats = "No"
         else:
             return "ERROR:  You must enter Yes or No"
 
@@ -226,9 +226,9 @@ class Vehicle_Options:
     # define set and get Blind Spot Detection
     def setBlindSpot(self, blindSpot):
         if blindSpot == "Yes" or blindSpot == "yes" or blindSpot == "Y" or blindSpot == "y":
-            return "Yes"
+            self.blindSpot = "Yes"
         elif blindSpot == "No" or blindSpot == "no" or blindSpot == "N" or blindSpot == "n":
-            return "No"
+            self.blindSpot = "No"
         else:
             return "ERROR:  You must enter Yes or No"
 
@@ -238,9 +238,9 @@ class Vehicle_Options:
     # define set and get Automatic Trans
     def setAutoTrans(self, autoTrans):
         if autoTrans == "Yes" or autoTrans == "yes" or autoTrans == "Y" or autoTrans == "y":
-            return "Yes"
+            self.autoTrans = "Yes"
         elif autoTrans == "No" or autoTrans == "no" or autoTrans == "N" or autoTrans == "n":
-            return "No"
+            self.autoTrans = "No"
         else:
             return "ERROR:  You must enter Yes or No"
 
@@ -251,13 +251,13 @@ class Vehicle_Options:
     # define set and get Drive Train
     def setDriveTrain(self, driveTrain):
         if driveTrain == "AWD" or driveTrain == "awd" or driveTrain == "Awd":
-            return "AWD"
+            self.driveTrain = "AWD"
         elif driveTrain == "4x4" or driveTrain == "4 x 4" or driveTrain == "4wd" or driveTrain == "4WD":
-            return "4WD"
+            self.driveTrain = "4WD"
         elif driveTrain == "RWD" or driveTrain == "rwd" or driveTrain == "Rwd":
-            return "RWD"
+            self.driveTrain = "RWD"
         elif driveTrain == "FWD" or driveTrain == "fwd" or driveTrain == "Fwd":
-            return "FWD"
+            self.driveTrain = "FWD"
         else:
             return "ERROR:  You must enter RWD, FWD, 4WD, or AWD"
 
@@ -364,24 +364,24 @@ x20 = raw_input("Does the vehicle have Blind Spot Detection?  ")
 # vehicle_X = Vehicle(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, x16, x17, x18, x19, x20, x21, x22)
 vehicle_X = Vehicle(x1, x2, x3)
 vehicle_X.vType = x4
-vehicle_X.numCylinders = x5
-vehicle_X.HP = x6
+vehicle_X.setNumCylinders(x5)
+vehicle_X.setHP(x6)
 vehicle_X.setTQ(x7)
 vehicle_X.setTowing(x8)
 vehicle_X.setWeight(x9)
-vehicle_X.vDoors = x10
+vehicle_X.setDoors(x10)
 vehicle_X.setColor(x11)
 vehicle_X.setPowerWindows(x12)
 vehicle_X.setPowerLocks(x13)
 vehicle_X.setNav(x14)
 vehicle_X.setPremAudio(x15)
 vehicle_X.setBackCam(x16)
-vehicle_X.leatherSeats = x17
-vehicle_X.heatedSeats = x18
-vehicle_X.ventedSeats = x19
-vehicle_X.blindSpot = x20
-vehicle_X.autoTrans = x21
-vehicle_X.driveTrain = x22
+vehicle_X.setLeatherSeats(x17)
+vehicle_X.setHeatedSeats(x18)
+vehicle_X.setVentedSeats(x19)
+vehicle_X.setBlindSpot(x20)
+vehicle_X.setAutoTrans(x21)
+vehicle_X.setDriveTrain(x22)
 
 
 print("======= First Default Vechicle =======")
