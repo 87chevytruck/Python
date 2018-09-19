@@ -1,4 +1,4 @@
-""" Ricky Smith, Networking:  Lab 1-2A Client, 19 Sept 2018 """
+""" Ricky Smith, Networking:  Lab 1-2C Client, 19 Sept 2018 """
 
 from socket import *
 
