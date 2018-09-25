@@ -9,13 +9,16 @@ s = socket(AF_INET, SOCK_DGRAM)
 s.bind(("",12345))
 
 
-# only does something when true (i.e., waits to recieve)
+# receive message and call it string1
 string1, addr = s.recvfrom(1024)
+
+# print current socket/address info
 print("\n==========\n\n{}\n\n===========\n".format(addr))
 
 IPadd = addr[0]
 IPport = addr[1]
 
+# create new address tuple using new port number
 newAddr = (IPadd, IPport + 1)
 
 
@@ -23,17 +26,19 @@ print("\n==========\n\n{}\n\n===========\n".format(newAddr))
 
 print("\nRecieved String is:\n{}\n").format(string1)
 
+# breakout string1 into list, then sort the list by word length
 list1 = string1.split()
 list2 = sorted(list1, key=len)
 
 print("String Split into Words are:\n{}\n").format(list1)
 
+# turn sorted list back into string with spaces separating words
 string2 = " ".join(list2)
 
 print("Same String with words reversed is:\n{}\n".format(string2))
 
-# newS = socket(AF_INET, SOCK_DGRAM)
-# newS.bind(("",12345))
+# creat new socket for sending on different port
+newS = socket(AF_INET, SOCK_DGRAM)
 
-s.sendto(string2, newAddr)
-
+# send string over new socket witht he new port
+newS.sendto(string2,(IPadd, (IPport + 1)))

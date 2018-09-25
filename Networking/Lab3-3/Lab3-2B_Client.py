@@ -2,16 +2,27 @@
 
 from socket import *
 
+# create socket
 s = socket(AF_INET, SOCK_DGRAM)
 
 string1 = "My name is Ricky Smith, and I am the coolest dude ever."
 
-s.sendto(string1,("192.168.31.132", 12345))
+# send string1 over socket to IP and Port combination
+s.sendto(string1,("192.168.31.133", 12345))
 
 print("\n\nThis is what I sent:\n{}\n").format(string1)
 
 print("\n===============================\n")
 
-string2, addr = s.recvfrom(1024)
+# uses socket info to grab current port, then add 1
+## assign that to newPort
+newPort = s.getsockname()[1] + 1
+
+# creat new socket
+sNew = socket(AF_INET, SOCK_DGRAM)
+
+# bind new socket to listen for anyting on newPort
+sNew.bind(("", newPort))
+string2, addr = sNew.recvfrom(1024)
 
 print("This is what I received:\n{}\n").format(string2)
